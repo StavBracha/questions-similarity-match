@@ -21,21 +21,12 @@ Scikit-learn
 1) Prepare Your Data: Your dataset should be in a CSV format with three columns: question1, question2, and is_duplicate, where is_duplicate indicates whether the questions are considered semantically similar.
 2) Pre-trained Word Embeddings: Place your pre-trained word embeddings file in the project directory and specify its name. The embeddings should be in a format where each line contains a word followed by its vector representation, separated by spaces.
 3) Train the Model:
-Modify the dataset path in the script to point to your dataset file.
-Load pre-trained embeddings by calling load_pre_trained_embeddings(path_to_embeddings).
-Initialize the Dataset class instances for training, validation, and testing datasets.
-Configure and instantiate the model, specifying the required parameters such as the dimensions of the embeddings, the number of heads for the Co-Attention mechanism, and the depth of the encoder layers.
-Train the model using the provided training loop, adjusting parameters like learning rate and batch size as needed.
-Evaluate the Model: Use the evaluation loop to assess the performance of the model on a validation or test set, obtaining metrics such as loss and cosine similarity for true and false pairs.
-Main Components
+* Modify the dataset path in the script to point to your dataset file.
+* Load pre-trained embeddings by calling load_pre_trained_embeddings(path_to_embeddings).
+* Initialize the Dataset class instances for training, validation, and testing datasets.
+*Configure and instantiate the model, specifying the required parameters such as the dimensions of the embeddings, the number of heads for the Co-Attention mechanism, and the depth of the encoder layers.
+* Train the model using the provided training loop, adjusting parameters like learning rate and batch size as needed.
+* Evaluate the Model: Use the evaluation loop to assess the performance of the model on a validation or test set, obtaining metrics such as loss and cosine similarity for true and false pairs.
 
-Preprocessing: Includes functions for loading datasets and pre-trained embeddings, and preparing word embeddings.
-Dataset Handling: Custom PyTorch Dataset class for loading and tokenizing question pairs.
-Model Architecture: Implements the Encoder with Co-Attention mechanism and a contrastive loss for learning similarity.
-Training and Evaluation: Training and evaluation loops with logging for performance monitoring.
-Customization
 
 The script is designed to be flexible, allowing for adjustments and customizations. You can modify the architecture, switch out components, adjust hyperparameters, or use different pre-trained embeddings based on your specific requirements or datasets.
-
-
-This README provides a concise guide to getting started with and effectively utilizing the Question Pair Similarity Model. Ensure to adjust paths and configurations as per your environment and dataset specifics.
